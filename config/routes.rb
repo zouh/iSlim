@@ -1,5 +1,7 @@
 ISlim::Application.routes.draw do
   
+  resources :nutrition_facts
+
   root to: "welcome#index"
   
   # The priority is based upon order of creation: first created -> highest priority.

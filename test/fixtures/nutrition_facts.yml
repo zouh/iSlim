@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bar_code: MyString
+  code: MyString
+  name: MyString
+  description: MyText
+  size_unit: MyString
+  size: 9.99
+  serving_size: 9.99
+  servings: 9.99
+  energy: 9.99
+  energy_unit: MyString
+  energy_percent: 1
+  protein: 9.99
+  protein_percent: 1
+  fat: 9.99
+  fat_percent: 1
+  carbohydrate: 9.99
+  carbohydrate_percent: 1
+  sodium: 9.99
+  sodium_percent: 1
+  created_by: MyString
+  updated_by: MyString
+
+two:
+  bar_code: MyString
+  code: MyString
+  name: MyString
+  description: MyText
+  size_unit: MyString
+  size: 9.99
+  serving_size: 9.99
+  servings: 9.99
+  energy: 9.99
+  energy_unit: MyString
+  energy_percent: 1
+  protein: 9.99
+  protein_percent: 1
+  fat: 9.99
+  fat_percent: 1
+  carbohydrate: 9.99
+  carbohydrate_percent: 1
+  sodium: 9.99
+  sodium_percent: 1
+  created_by: MyString
+  updated_by: MyString

@@ -1,0 +1,78 @@
+<h1>营养成分</h1>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>编码：</strong><%= @nutrition_fact.code %>&nbsp;&nbsp;&nbsp;&nbsp; 
+  <strong>条码：</strong><%= @nutrition_fact.bar_code %>
+ </p>
+
+<p>
+  <strong>名称：</strong><%= @nutrition_fact.name %>&nbsp;&nbsp;&nbsp;&nbsp;
+    <strong>说明：</strong><%= @nutrition_fact.description %>
+</p>
+
+<p>
+  <strong>含量：</strong><%= @nutrition_fact.size %><%= @nutrition_fact.size_unit %>&nbsp;&nbsp;&nbsp;&nbsp;
+  <strong>每份数量：</strong> <%= @nutrition_fact.serving_size %><%= @nutrition_fact.size_unit %>  &nbsp;&nbsp;&nbsp;&nbsp;
+  <strong>份数：</strong><%= @nutrition_fact.servings %>
+</p>
+
+<table>
+  <tr> 
+    <th>项目 <br>(Item)</th>
+    <th></th>
+    <th>每 <%= @nutrition_fact.serving_size %><%= @nutrition_fact.size_unit %><br>
+      (per <%= @nutrition_fact.serving_size %><%= @nutrition_fact.size_unit %>)</th>
+    <th></th>
+    <th> % 营养素参考值<br>(% NRV)</th>
+  </tr> 
+
+  <tr> 
+    <td>能量 <br>(Energy)</td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td><%= @nutrition_fact.energy %><%= @nutrition_fact.energy_unit %></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td><%= @nutrition_fact.energy_percent %>%</td>
+  </tr>
+
+  <tr> 
+    <td>蛋白质 <br>(Protein)</td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td><%= @nutrition_fact.protein %>g</td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td><%= @nutrition_fact.protein_percent %>%</td>
+  </tr>
+
+  <tr> 
+    <td>脂肪 <br>(Fat)</td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td><%= @nutrition_fact.fat %>g</td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td><%= @nutrition_fact.fat_percent %>%</td>
+  </tr>
+
+  <tr> 
+    <td>碳水化合物 <br>(Carbohydrate)</td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td><%= @nutrition_fact.carbohydrate %>g</td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td><%= @nutrition_fact.carbohydrate_percent %>%</td>
+  </tr>
+
+  <tr> 
+    <td>盐 <br>(Sodium)</td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td><%= @nutrition_fact.sodium %>mg</td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td><%= @nutrition_fact.sodium_percent %>%</td>
+  </tr>
+
+</table>
+<p>
+  <strong>创建人：</strong><%= @nutrition_fact.created_by %>&nbsp;&nbsp;&nbsp;&nbsp;
+  <strong>修改人：</strong><%= @nutrition_fact.updated_by %>
+</p>
+
+<%= link_to '编辑', edit_nutrition_fact_path(@nutrition_fact) %> |
+<%= link_to '返回列表', nutrition_facts_path %>

@@ -1,0 +1,62 @@
+<h1>营养成分列表</h1>
+
+<p><%= link_to '新增', new_nutrition_fact_path %></p>
+
+<table>
+  <tr>
+    <th>条码</th>
+    <th>编码</th>
+    <th>名称</th>
+    <th>数量</th>
+    <th>每份数量</th>
+    <th>份数</th>
+    <th>能量</th>
+    <th>(% NRV)</th>
+    <th>蛋白质</th>
+    <th>(% NRV)</th>
+    <th>脂肪</th>
+    <th>(% NRV)</th>
+    <th>碳水化合物</th>
+    <th>(% NRV)</th>
+    <th>盐</th>
+    <th>(% NRV)</th>
+    <th>创建人</th>
+    <th>修改人</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <tbody>
+    <% @nutrition_facts.each do |nutrition_fact| %>
+      <tr>
+        <td><%= nutrition_fact.bar_code %></td>
+        <td><%= nutrition_fact.code %></td>
+        <td><%= nutrition_fact.name %></td>
+        <td><%= nutrition_fact.size %><%= nutrition_fact.size_unit %>&nbsp;&nbsp;</td>
+        <td><%= nutrition_fact.serving_size %><%= nutrition_fact.size_unit %>&nbsp;&nbsp;</td>
+        <td><%= nutrition_fact.servings %></td>
+        <td><%= nutrition_fact.energy %><%= nutrition_fact.energy_unit %>&nbsp;&nbsp;</td>
+        <td><%= nutrition_fact.energy_percent %>%</td>
+        <td><%= nutrition_fact.protein %>g&nbsp;&nbsp;</td>
+        <td><%= nutrition_fact.protein_percent %>%</td>
+        <td><%= nutrition_fact.fat %>g&nbsp;&nbsp;</td>
+        <td><%= nutrition_fact.fat_percent %>%</td>
+        <td><%= nutrition_fact.carbohydrate %>g&nbsp;&nbsp;</td>
+        <td><%= nutrition_fact.carbohydrate_percent %>%</td>
+        <td><%= nutrition_fact.sodium %>mg&nbsp;&nbsp;</td>
+        <td><%= nutrition_fact.sodium_percent %>%</td>
+        <td><%= nutrition_fact.created_by %></td>
+        <td><%= nutrition_fact.updated_by %></td>
+        <td><%= link_to '查看', nutrition_fact_path(nutrition_fact) %></td>
+        <td><%= link_to '编辑', edit_nutrition_fact_path(nutrition_fact) %></td>
+        <td><%= link_to '删除', nutrition_fact_path(nutrition_fact),
+                        method: :delete, data: { confirm: '确定删除吗？' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '新增', new_nutrition_fact_path %>
