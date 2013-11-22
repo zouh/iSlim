@@ -28,28 +28,28 @@
     <%= f.text_area :description %>
   </div>
   <div class="field">
+    <%= f.label :size, '数量 (商品包装上的重量或容积)' %><br>
+    <%= f.text_field :size %>
+  </div>
+  <div class="field">
     <%= f.label :size_unit, '数量单位 (g / ml)' %><br>
     <%= f.text_field :size_unit %>
   </div>
   <div class="field">
-    <%= f.label :size, '数量' %><br>
-    <%= f.text_field :size %>
-  </div>
-  <div class="field">
-    <%= f.label :serving_size, '每份数量' %><br>
+    <%= f.label :serving_size, '每份数量 (营养标签上使用的基准数量，一般为100)' %><br>
     <%= f.text_field :serving_size %>
   </div>
   <div class="field">
-    <%= f.label :servings, '份数' %><br>
+    <%= f.label :servings, '份数 (= 数量 / 每份数量)' %><br>
     <%= f.text_field :servings %>
-  </div>
-  <div class="field">
-    <%= f.label :energy_unit, '能量单位 (kJ / kcal)' %><br>
-    <%= f.text_field :energy_unit %>
   </div>
   <div class="field">
     <%= f.label :energy, '能量' %><br>
     <%= f.text_field :energy %>
+  </div>
+  <div class="field">
+    <%= f.label :energy_unit, '能量单位 (kJ / kcal)' %><br>
+    <%= f.text_field :energy_unit %>
   </div>
   <div class="field">
     <%= f.label :energy_percent, '能量 %NRV' %><br>

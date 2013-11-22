@@ -1,5 +1,9 @@
 ISlim::Application.routes.draw do
   
+  resources :microposts
+
+  resources :users
+
   resources :nutrition_facts
 
   root to: "welcome#index"

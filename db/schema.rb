@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131120145831) do
+ActiveRecord::Schema.define(version: 20131122025929) do
+
+  create_table "microposts", force: true do |t|
+    t.string   "content"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "nutrition_facts", force: true do |t|
     t.string   "bar_code"
@@ -35,6 +42,13 @@ ActiveRecord::Schema.define(version: 20131120145831) do
     t.integer  "sodium_percent"
     t.string   "created_by"
     t.string   "updated_by"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
